@@ -10,3 +10,5 @@ D’abord, établis les règles de gestions des données de ton entreprise, sous
 Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes avec les colonnes suivantes, regroupées dans un tableau : signification de la donnée, type, taille en nombre de caractères ou de chiffres. Il doit y avoir entre 25 et 35 données. Il sert à fournir des informations supplémentaires sur chaque donnée (taille et type) mais sans a priori sur comment les données vont être modélisées ensuite. 
 
 Fournis donc les règles de gestion et le dictionnaire de données."
+
+https://claude.ai/share/f6264ab1-03d6-4754-bb14-5856e0d594a0
