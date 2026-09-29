@@ -11,4 +11,4 @@ Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes av
 
 Fournis donc les règles de gestion et le dictionnaire de données."
 
-https://claude.ai/share/f6264ab1-03d6-4754-bb14-5856e0d594a0
+https://claude.ai/chat/06cf71a7-3ff9-4e30-98ba-297de6d04908
