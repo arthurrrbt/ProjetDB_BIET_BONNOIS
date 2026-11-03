@@ -1,0 +1,27 @@
+Tu travailles dans le domaine de l'automobile. Ton entreprise CAREFREI a comme activite de constructeur automobile. C'est une entreprise comme Stellantis, Groupe VAG ou BMW. Le systeme d'information concerne uniquement la partie technique et industrielle (bureau d'etudes et production) : les modeles, les moteurs, les voitures produites, les pieces, les fournisseurs et les options. Il ne concerne ni les clients, ni les commandes, ni les concessionnaires, ni les usines.
+
+Inspire-toi des sites web suivants, en particulier de leurs pages sur la gamme de modeles, les motorisations et les options :
+- https://www.stellantis.com/fr
+- https://www.bmw.fr/fr/accueil.html
+- https://www.volkswagen.fr/fr.html
+
+Un etudiant en ingenierie informatique a cree la base de donnees de CAREFREI sous MySQL. Voici le script de creation des tables (1_creation.sql) et le script des contraintes de validation (2_contraintes.sql) :
+[COLLER ICI LE CONTENU DE 1_creation.sql]
+[COLLER ICI LE CONTENU DE 2_contraintes.sql]
+
+Tu dois remplir cette base avec des donnees fictives mais realistes, pour qu'il puisse ensuite tester des requetes SQL.
+
+Ecris un script SQL d'insertion qui respecte les regles suivantes :
+- Utilise uniquement des requetes INSERT INTO ... VALUES, une par table, avec plusieurs lignes par requete.
+- Insere les tables dans le bon ordre : d'abord les tables sans cle etrangere, puis celles qui les referencent.
+- Toutes les donnees doivent respecter les cles primaires, les cles etrangeres et les contraintes CHECK, UNIQUE et NOT NULL du script.
+- N'utilise pas d'accents ni d'apostrophes dans les valeurs texte.
+- Volume attendu : environ 10 modeles (un type de carrosserie different par modele), une dizaine de codes moteur differents (essence, diesel, hybride, electrique) proposes sur plusieurs modeles, 60 voitures produites, une quarantaine de pieces, 10 fournisseurs de plusieurs pays, une douzaine d'options.
+- Le numero VIN fait 17 caracteres et commence par VF suivi du code du modele. La date de fabrication d'une voiture est posterieure a la date de lancement de son modele.
+- Une voiture est equipee d'un moteur propose pour son modele.
+- Un moteur hybride fonctionne avec deux energies : essence et electrique.
+- Chaque piece est livree par au moins un fournisseur et chaque fournisseur livre au moins une piece.
+- Chaque option necessite au moins une piece.
+- Pour pouvoir tester des jointures externes et des requetes imbriquees, prevois aussi quelques cas particuliers : un modele recent sans aucune voiture produite, une option disponible sur aucun modele, quelques pieces utilisees dans aucun moteur et aucune option, et une piece livree par un seul fournisseur.
+
+Rendement : fournis un seul script SQL commente, qui commence par USE CAREFREI; et qui peut etre execute directement apres les deux scripts de creation.
