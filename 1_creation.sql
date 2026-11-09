@@ -1,18 +1,5 @@
 -- ============================================================
 -- CAREFREI - Mini Projet 2
--- Fichier 1 : creation de la base et des tables (MPD)
--- SGBD : MySQL 8
---
--- Les tables sont reprises du Mini Projet 1 (meme MCD / MLD).
--- Nouveaute : chaque cle etrangere a
---     ON DELETE CASCADE  -> si on supprime la ligne parente,
---                           les lignes qui la referencent sont supprimees aussi
---     ON UPDATE CASCADE  -> si on modifie la cle de la ligne parente,
---                           la modification est recopiee automatiquement
--- Comme ca, aucune erreur n'est declenchee quand on modifie ou supprime
--- une ligne referencee par une cle etrangere.
---
--- La table OPTION s'appelle OPTIONS car OPTION est un mot reserve en MySQL.
 -- ============================================================
 
 DROP DATABASE IF EXISTS CAREFREI;
