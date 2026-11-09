@@ -1,21 +1,5 @@
 -- ============================================================
 -- CAREFREI - Mini Projet 2
--- Fichier 2 : contraintes de validation (regles metier)
--- A executer APRES 1_creation.sql
---
--- Types de contraintes utilises (vus en cours) :
---   CHECK avec comparaison      ( > , < , <= ... )
---   CHECK avec BETWEEN          (intervalle de valeurs)
---   CHECK avec IN               (liste de valeurs autorisees)
---   CHECK avec LIKE / REGEXP    (format d'une donnee)
---   CHECK entre deux colonnes   (empattement < longueur)
---   UNIQUE                      (pas de doublon)
---   DEFAULT                     (valeur par defaut)
---
--- Remarque MySQL : on ne peut pas mettre de CHECK sur une colonne qui
--- sert de cle etrangere avec ON DELETE/UPDATE CASCADE. Les CHECK sont
--- donc poses dans la table "parente" (ex : le format du code modele
--- est verifie dans MODELE, pas dans VOITURE).
 -- ============================================================
 
 USE CAREFREI;
