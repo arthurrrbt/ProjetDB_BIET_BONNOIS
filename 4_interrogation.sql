@@ -1,21 +1,10 @@
 -- ============================================================
 -- CAREFREI - Mini Projet 2
--- Fichier 4 : interrogation de la base
---
--- Scenario (detaille dans le README) :
--- Claire est responsable des achats (service approvisionnement) chez
--- CAREFREI. Elle prepare le plan d'achat de pieces pour l'annee 2027.
--- Elle doit savoir quels modeles et moteurs sont produits, quelles
--- pieces il faut commander, chez quels fournisseurs, et reperer les
--- risques (piece livree par un seul fournisseur, pieces inutilisees...).
 -- ============================================================
 
 USE CAREFREI;
 
 
--- ============================================================
--- PARTIE A : PROJECTIONS ET SELECTIONS
--- (tri, DISTINCT, LIKE, IN, BETWEEN)
 -- ============================================================
 
 -- A1. Liste des modeles, du plus recent au plus ancien
@@ -59,11 +48,6 @@ FROM MOTEUR
 WHERE puissance > 100
 ORDER BY puissance DESC;
 
-
--- ============================================================
--- PARTIE B : FONCTIONS D'AGREGATION
--- (COUNT, SUM, AVG, MIN, MAX avec GROUP BY et HAVING)
--- ============================================================
 
 -- B1. Nombre total de voitures produites
 SELECT COUNT(*) AS nb_voitures
@@ -109,12 +93,6 @@ ORDER BY annee;
 SELECT type_option, COUNT(*) AS nb_options
 FROM OPTIONS
 GROUP BY type_option;
-
-
--- ============================================================
--- PARTIE C : JOINTURES
--- (internes, externes, simples, multiples, auto-jointure)
--- ============================================================
 
 -- C1. Jointure simple : chaque modele avec son type de carrosserie
 SELECT M.nom_modele, C.type_carrosserie
@@ -177,12 +155,6 @@ SELECT F1.raison_sociale AS fournisseur_1,
 FROM FOURNISSEUR F1
 JOIN FOURNISSEUR F2 ON F1.pays = F2.pays
                    AND F1.siret < F2.siret;
-
-
--- ============================================================
--- PARTIE D : REQUETES IMBRIQUEES
--- (IN, NOT IN, EXISTS, NOT EXISTS, ANY, ALL)
--- ============================================================
 
 -- D1. IN : fournisseurs qui livrent au moins une piece
 --     d'un moteur electrique (code qui commence par E-EL)
@@ -254,14 +226,6 @@ SELECT nom_modele, longueur
 FROM MODELE
 WHERE longueur > (SELECT AVG(longueur) FROM MODELE)
 ORDER BY longueur DESC;
-
-
--- ============================================================
--- REQUETE ETUDIEE DANS LE README (plans d'execution)
--- Designation des pieces de plus de 5 kg livrees par
--- un fournisseur francais, avec le nom du fournisseur.
--- Operateurs : selection, jointure, projection
--- ============================================================
 
 SELECT P.designation, F.raison_sociale
 FROM FOURNISSEUR F
